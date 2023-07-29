@@ -1,5 +1,6 @@
 import React, { useState, useRef } from "react";
 import "./Video.css";
+import VideoFooter from "./VideoFooter";
 
 function Video({ channel, url, description, song, likes, messages, shares }) {
   const [playing, setPlaying] = useState(true);
@@ -28,6 +29,7 @@ function Video({ channel, url, description, song, likes, messages, shares }) {
         onClick={onVideoPress}
         src={url}
       />
+      <VideoFooter channel={channel} description={description} song={song} />
     </div>
   );
 }
